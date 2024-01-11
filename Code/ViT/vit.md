@@ -16,13 +16,13 @@ Class Token을 입력 시퀀스의 맨 앞에 추가합니다. 이 토큰은 분
 
 Learnable Positional Embedding을 각 패치에 추가합니다. Positional Embedding의 크기는 (1, 65, 48)입니다.
 
-입력 시퀀스를 d_model=768 차원의 임베딩으로 변환합니다. 이때, nn.Linear를 사용하면 편리합니다. 이 과정을 통해 입력 시퀀스는 (batch_size, 65, 768)의 크기를 가지게 됩니다.
+입력 시퀀스를 in_dim=256 차원의 임베딩으로 변환합니다. 이때, nn.Linear를 사용하면 편리합니다. 이 과정을 통해 입력 시퀀스는 (batch_size, 65, 256)의 크기를 가지게 됩니다.
 
 ## 5. Transformer Encoder:
 
-입력 시퀀스는 Transformer Encoder를 통과합니다. 여기서 d_model=768과 8개의 attention head(num_heads=8)를 사용합니다.
-Multi-Head Attention: 각 head의 크기는 d_k = d_model / num_heads = 96이 됩니다.
-Feed Forward Network (FFN): 두 개의 linear layer로 구성되며, 크기는 각각 (768, 2048)과 (2048, 768)입니다.
+입력 시퀀스는 Transformer Encoder를 통과합니다. 여기서 d_model=512과 8개의 attention head(num_heads=8)를 사용합니다.
+Multi-Head Attention: 각 head의 크기는 d_k = d_model / num_heads = 64이 됩니다.
+Feed Forward Network (FFN): 두 개의 linear layer로 구성되며, 크기는 각각 (512, 2048)과 (2048, 256)입니다.
 각 sub-layer(attention과 FFN) 뒤에는 residual connection과 Layer Normalization이 적용됩니다.
 이 과정은 4번 반복됩니다.
 
