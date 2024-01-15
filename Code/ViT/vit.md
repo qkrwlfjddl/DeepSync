@@ -16,7 +16,7 @@ Class Token을 입력 시퀀스의 맨 앞에 추가합니다. 이 토큰은 분
 
 Learnable Positional Embedding을 각 패치에 추가합니다. Positional Embedding의 크기는 (1, 65, 48)입니다.
 
-입력 시퀀스를 in_dim=256 차원의 임베딩으로 변환합니다. 이때, nn.Linear를 사용하면 편리합니다. 이 과정을 통해 입력 시퀀스는 (batch_size, 65, 256)의 크기를 가지게 됩니다.
+입력 시퀀스를 d_model=512 차원의 임베딩으로 변환합니다. 이때, nn.Linear를 사용하면 편리합니다. 이 과정을 통해 입력 시퀀스는 (batch_size, 65, d_model)의 크기를 가지게 됩니다.
 
 ## 5. Transformer Encoder:
 
