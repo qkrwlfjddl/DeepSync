@@ -30,8 +30,7 @@
 # Optimization scheme
 ## Activation Recomputation
 ## KV-cache
-![image](https://github.com/devkade/DeepSync/assets/11837072/a40fc8ac-b5c0-44ee-b36d-a3dadbbb0028)
-
+![image]([https://miro.medium.com/v2/resize:fit:720/format:webp/1*uyuyOW1VBqmF5Gtv225XHQ.gif])
 
 # DGX 구성
 - A100 80G x 8
