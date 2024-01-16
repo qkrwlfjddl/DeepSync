@@ -16,7 +16,23 @@
 # Analysis by pass
 ## Forward Pass
 ## Backward Pass
+
+# Analysis by task
+## Training
+- forward + backward
+## Inference
+- forward
+### Prefill
+- inference 중에서 input length의 token으로 1개의 token을 generation 하는 과정
+### Decode
+- prefill 이후 eos가 나올 때 까지 n개의 output token을 generation 하는 과정
    
 # Optimization scheme
 ## Activation Recomputation
 ## KV-cache
+![image](https://github.com/devkade/DeepSync/assets/11837072/a40fc8ac-b5c0-44ee-b36d-a3dadbbb0028)
+
+
+# DGX 구성
+- A100 80G x 8
+- Infiniband network x 8
