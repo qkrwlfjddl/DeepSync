@@ -24,7 +24,9 @@
 ### Backward Pass
 - flops : forward flops x 2
 - memory : model parameters + activation memory + gradient + optimizer memory
+
 <br>
+
 ## Analysis by task
 ### Training
 - forward + backward
