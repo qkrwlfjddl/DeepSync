@@ -69,8 +69,8 @@ class ViT(nn.Module):
     def __init__(self):
         super().__init__()
         self.patch_embedding = PatchEmbedding()
-        self.add_class_token = AddClassToken(dim=___)
-        self.positional_embedding = PositionalEmbedding(seq_len=___, dim=___)
+        self.add_class_token = AddClassToken()
+        self.positional_embedding = PositionalEmbedding()
         self.transformer = ViTTransformer()
         self.classifier = ClassifierHead()
 
@@ -85,8 +85,4 @@ model = ViT()
 # TODO: 적절한 손실 함수 설정
 criterion =
 
-
-test_input = torch.rand(1, 3, 32, 32)  # 예시 입력
-test_output = model(test_input)
-print(test_output.shape)  # 예상 출력: [1, 10]
-
+# 모델 훈련
