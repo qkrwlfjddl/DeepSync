@@ -10,7 +10,7 @@ DSC(DeepSync Code)는 학술 논문에 기반한 코드 구현을 주요 목표�
 
 | 번호 | 모델                                                                 | 문제 링크                                                             | 나보영 | 오원준 | 이민지 |
 | ---- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | ------ | ------ | ------ |
-| 1    | [ViT](https://github.com/devkade/DeepSync/blob/main/Code/ViT/vit.md) | [문제](https://github.com/devkade/DeepSync/blob/main/Code/ViT/vit.py) |  [code](https://github.com/devkade/DeepSync/blob/Code/Code/ViT/vit_boyeong.py)      | [code](https://github.com/devkade/DeepSync/blob/Code/Code/ViT/vit_wonjun.py) [log]()      |        |
+| 1    | [ViT](https://github.com/devkade/DeepSync/blob/main/Code/ViT/vit.md) | [문제](https://github.com/devkade/DeepSync/blob/main/Code/ViT/vit.py) |  [code](https://github.com/devkade/DeepSync/blob/Code/Code/ViT/vit_boyeong.py)      | [code](https://github.com/devkade/DeepSync/blob/Code/Code/ViT/vit_wonjun.py), [log](https://wandb.ai/ownvoy/ViT/runs/gyds987r?workspace=user-ownvoy)      |        |
 | 2    | YOLO                                                                 |                                                                       |        |        |        |
 |      |                                                                      |                                                                       |        |        |        |
 |      |                                                                      |                                                                       |        |        |        |
