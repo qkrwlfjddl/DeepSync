@@ -23,7 +23,7 @@ class Args:
     wandb_run_name: str = "ViT Cifar10 base"
     epochs: int = 200
     learning_rate: int = 0.0001
-    batch_size: int = 512
+    batch_size: int = 256
     total_steps: int = int(50000 % batch_size) * epochs
     warmup_steps: int = 4000
     num_class: int = 10
@@ -115,7 +115,7 @@ class AddClassToken(nn.Module):
     def forward(self, x):
         # TODO: Class Token 추가 로직 구현
         batch_size = len(x)
-        batch_cls_token = self.cls_token.expand(batch_size, -1,-1)
+        batch_cls_token = self.cls_token.expand(batch_size, -1, -1)
         batch_cls_token.cuda()
         return torch.cat([batch_cls_token, x], dim=1)
 
@@ -144,54 +144,46 @@ class EncoderBlock(nn.Module):
         self.d_k = int(d_model / num_heads)
         self.num_heads = num_heads
 
-        w_q = nn.init.xavier_uniform_(
-            torch.empty(self.d_model, self.d_k), gain=nn.init.calculate_gain("relu")
-        )
-        w_k = nn.init.xavier_uniform_(
-            torch.empty(self.d_model, self.d_k), gain=nn.init.calculate_gain("relu")
-        )
-        w_v = nn.init.xavier_uniform_(
-            torch.empty(self.d_model, self.d_k), gain=nn.init.calculate_gain("relu")
-        )
+        self.q_w = nn.Linear(self.d_model, self.d_model)
+        self.k_w = nn.Linear(self.d_model, self.d_model)
+        self.v_w = nn.Linear(self.d_model, self.d_model)
 
-        self.q_heads = nn.ParameterList([nn.Parameter(w_q.clone()) for _ in range(num_heads)])
-        self.k_heads = nn.ParameterList([nn.Parameter(w_k.clone()) for _ in range(num_heads)])
-        self.v_heads = nn.ParameterList([nn.Parameter(w_v.clone()) for _ in range(num_heads)])
-
-        self.o_w = nn.Linear(self.d_model, self.d_model, bias=False).cuda()
-        init.xavier_normal_(self.o_w.weight)
-        self.dropout1 = nn.Dropout(0.1)
-        self.dropout2 = nn.Dropout(0.1)
+        self.dropout1 = nn.Dropout(0.0)
+        self.dropout2 = nn.Dropout(0.0)
 
         self.layer_norm1 = nn.LayerNorm([num_seq, self.d_model])
         self.layer_norm2 = nn.LayerNorm([num_seq, self.d_model])
 
         self.ffn = nn.Sequential(
             nn.Linear(self.d_model, dff),
-            nn.Dropout(0.1),
+            nn.Dropout(0.0),
             nn.GELU(),
             nn.Linear(dff, self.d_model),
-            nn.Dropout(0.1),
+            nn.Dropout(0.0),
         )
 
     def forward(self, x):
         # TODO: Transformer Encoder 로직 구현
+        q = self.q_w(x)
+        k = self.k_w(x)
+        v = self.v_w(x)
+        qkv_size = list(q.shape)
 
-        q_head_weights = torch.cat([h for h in self.q_heads], dim=1)
-        k_head_weights = torch.cat([h for h in self.k_heads], dim=1)
-        v_head_weights = torch.cat([h for h in self.v_heads], dim=1)
-        q = x @ q_head_weights
-        k = x @ k_head_weights
-        v = x @ v_head_weights
+        
+        # q의 shape(B, seq_len, dim)을 (B, seq_len, head, d_k)로 바꿔줌
+        q = q.reshape(qkv_size[:-1]+[self.num_heads, self.d_k])
+        k = k.reshape(qkv_size[:-1]+[self.num_heads, self.d_k])
+        v = v.reshape(qkv_size[:-1]+[self.num_heads, self.d_k])
 
-        dot = (
-            torch.matmul(q, torch.permute(k, (0, 2, 1)))
-            / torch.sqrt(torch.tensor([self.d_k])).cuda()
-        )
-        dot = torch.softmax(dot, dim=-1)
-        attention = torch.matmul(dot, v)
-        attention = self.dropout1(attention)
-        attention = self.o_w(attention)
+
+        attention = torch.matmul(q.permute(0,2,1,3),k.permute(0,2,3,1)) / torch.sqrt(torch.tensor([self.d_k])).cuda()
+        # attention size: (B, h, seq_len, seq_len)임.
+        attention = torch.softmax(attention, dim=-1)
+        # v: size (B,seq_len,h,d_k)
+        attention = torch.matmul(attention,v.permute(0,2,1,3))
+        attention = attention.permute(0,2,1,3)
+        attention = attention.reshape(qkv_size)
+
 
         # Residual Connection
         attention = x + attention
@@ -279,6 +271,7 @@ scheduler = lr_scheduler.CosineAnnealingLR(optimizer, args.epochs)
 
 criterion = nn.CrossEntropyLoss()
 
+
 def train(model, trainloader):
     for batch in tqdm(trainloader, desc="train", leave=False):
         data, label = batch
@@ -332,3 +325,4 @@ for epoch_num in tqdm(range(1, EPOCHS + 1)):
             },
             f"model{epoch_num}.pt",
         )
+
