@@ -17,4 +17,3 @@ DeepSync is AI paper study by a group of people interested in deep learning.
 - [Sprint1 - Core, Historically CV, NLP SOTA Model](https://github.com/devkade/DeepSync/tree/main/Docs/sprint1_core)
 - [Sprint2 - Object Detection](https://github.com/devkade/DeepSync/tree/main/Docs/sprint2_object%20detection)
 - [Sprint3 - PEFT, Quantization, Efficient Transformer, Knowledge Distillation, AI Agent](https://github.com/devkade/DeepSync/tree/main/Docs/sprint3)
-
