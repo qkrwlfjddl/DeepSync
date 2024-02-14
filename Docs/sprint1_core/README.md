@@ -1,5 +1,5 @@
 
-# Sprint3
+# Sprint1
 
 - Topic : Historically CV, NLP SOTA Model
 - Period : 2023.08.20 ~ 2023.09.10
