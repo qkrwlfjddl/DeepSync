@@ -32,5 +32,5 @@
 | 2024.02.07 | DeiT | Knowledge Distillation | 김해문 | [Paper](https://arxiv.org/abs/2012.12877)</br> [Slide](https://drive.google.com/file/d/1d6lnXw-qwoMDoWg8OdR99ZwrW4xdUmxJ/view?usp=sharing)  |
 | 2024.01.31 | Generative Agents: Interactive Simulacra of Human Behavior | AI Agent | 박지영 | [Paper](https://arxiv.org/abs/2304.03442)</br>[Review](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/Generative.Agents-Interactive.Simulacra.of.Human.Behavior.pdf) |
 |  | The Rise and Potential of Large Language Model Based Agents: A Survey | AI Agent |  | [Paper](https://arxiv.org/abs/2309.07864) |
-| 2024.02.07 | Agents: An Open-source Framework for Autonomous Language Agents | AI Agent | 나보영 | [Paper](https://arxiv.org/abs/2309.07870)</br>      |
+| 2024.02.07 | Agents: An Open-source Framework for Autonomous Language Agents | AI Agent | 나보영 | [Paper](https://arxiv.org/abs/2309.07870)</br>[Review](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/AgentsAnOpen-sourceFrameworkforAutonomousLanguageAgents.pdf)      |
 |  | JARVIS-1: Open-World Multi-task Agents with Memory-Augmented Multimodal Language Models | AI Agent |  | [Paper](https://arxiv.org/abs/2311.05997) |
