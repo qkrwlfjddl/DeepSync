@@ -8,7 +8,7 @@
 | ---- | ---- | ---- | ---- | ---- |
 | 2024.01.24 | Parameter-Efficient Transfer Learning for NLP | PEFT | 나보영 | [Paper](https://arxiv.org/abs/1902.00751) |
 | 2024.01.31 | LoRA | PEFT | 강동규 | [Paper](https://arxiv.org/abs/2106.09685)</br> [Slide](https://github.com/devkade/DeepSync/tree/main/Docs/sprint3/LoRA.pdf) |
-|  | Prefix-Tuning | PEFT |  | [Paper](https://arxiv.org/abs/2101.00190) |
+| 2024.02.21 | Prefix-Tuning | PEFT |  | [Paper](https://arxiv.org/abs/2101.00190) |
 |  | Few-Shot Parameter-Efficient Fine-Tuning vs. In-Context Learning | PEFT | 강동규 | [Paper](https://arxiv.org/abs/2205.05638) |
 |  | QLoRA | PEFT |  | [Paper](https://arxiv.org/abs/2305.14314) |
 |  | A Survey of Quantization Methods for Efficient Neural Network Inference | Quantization |  | [Paper](https://arxiv.org/abs/2103.13630) |
