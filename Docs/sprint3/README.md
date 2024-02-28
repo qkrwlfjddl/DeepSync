@@ -22,7 +22,7 @@
 | 2024.01.24 | Swin Transformer | Efficient Transformer | 오원준 | [Paper](https://arxiv.org/abs/2103.14030)</br>[Review](https://ownogatari.xyz/posts/swin/)</br>[Slides](https://drive.google.com/file/d/1lKkg_PGO7e2EJt5hMZuLiPtA4QZJhIgo/view?usp=sharing)   |
 |  | zero | Efficient Transformer |  | [Paper](https://arxiv.org/abs/1910.02054) |
 |  | zero infinity | Efficient Transformer |  | [Paper](https://arxiv.org/abs/2104.07857) |
-| 2024.02.14 | Switch Transformer | Efficient Transformer | 오원준  | [Paper](https://arxiv.org/abs/2101.03961) |
+| 2024.02.14 | Switch Transformer | Efficient Transformer | 오원준  | [Paper](https://arxiv.org/abs/2101.03961)</br>[Slide](https://drive.google.com/file/d/1Q7rAb1MIBOnWCkSuQRQzzvXlw7xyo4Of/view?usp=sharing) |
 |  | DeepSpeed-MoE or Extreme Compression for Pre-trained Transformers Made Simple and Efficient | Efficient Transformer |  | [Paper](https://arxiv.org/abs/2201.05596) |
 | 2024.01.31 | Paged Attention | Efficient Transformer | 김민준 | [Paper](https://arxiv.org/abs/2309.06180) |
 |  | FlashAttention | Efficient Transformer |  | [Paper](https://arxiv.org/abs/2205.14135) |
