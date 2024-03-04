@@ -4,7 +4,7 @@
 - Period : 2024.01.24 ~ 2024.03.27(TBD)
 - Presenter : 강동규, 오원준, 나보영, 이민지, 이승호, 김민준, 김해문, 박지영
 
-| Date | Paper | Category | Presenter | Link |
+| Date | Paper |[s Category | Presenter | Link |
 | ---- | ---- | ---- | ---- | ---- |
 | 2024.01.24 | Parameter-Efficient Transfer Learning for NLP | PEFT | 나보영 | [Paper](https://arxiv.org/abs/1902.00751)</br>[Review](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/Parameter-Efficient%20Transfer%20Learning%20for%20NLP.pdf) |
 | 2024.01.31 | LoRA | PEFT | 강동규 | [Paper](https://arxiv.org/abs/2106.09685)</br> [Slide](https://github.com/devkade/DeepSync/tree/main/Docs/sprint3/LoRA.pdf) |
@@ -12,7 +12,7 @@
 | 2024.02.21 | Few-Shot Parameter-Efficient Fine-Tuning vs. In-Context Learning | PEFT | 강동규 | [Paper](https://arxiv.org/abs/2205.05638) <br>[Slide](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/Few-Shot%20PEFT%20is%20Better%20and%20Cheaper%20than%20ICL.pdf) |
 |  | QLoRA | PEFT |  | [Paper](https://arxiv.org/abs/2305.14314) |
 |  | A Survey of Quantization Methods for Efficient Neural Network Inference | Quantization |  | [Paper](https://arxiv.org/abs/2103.13630) |
-|  | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference | Quantization |  | [Paper](https://arxiv.org/abs/1712.05877) |
+| 2024.02.21 | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference | Quantization | 김민준 | [Paper](https://arxiv.org/abs/1712.05877) </br>[Slide](https://github.com/devkade/DeepSync/tree/main/Docs/sprint3/Quantization_and_Training_of_Neural_Networks_for_Efficient_Integer-Arithmetic-Only_Inference.pdf)|
 | 2024.02.14 | Mixed Precision Training | Quantization | 이민지 | [Paper](https://arxiv.org/abs/1710.03740) |
 |  | Quant-Noise | Quantization |  | [Paper](https://arxiv.org/abs/2004.07320) |
 |  | LLM.int8() | Quantization |  | [Paper](https://arxiv.org/abs/2208.07339) |
