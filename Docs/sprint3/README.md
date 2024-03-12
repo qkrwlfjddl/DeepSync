@@ -11,7 +11,7 @@
 | 2024.02.14 | Prefix-Tuning | PEFT | 박지영 | [Paper](https://arxiv.org/abs/2101.00190) </br> [Slide](https://github.com/devkade/DeepSync/blob/bc4ac2695c945d1985f974900bba35cf6727394c/Docs/sprint3/Prefix-Tuning%20Optimizing%20Continuous%20Prompts%20for%20Generation.pdf) |
 | 2024.02.21 | Few-Shot Parameter-Efficient Fine-Tuning vs. In-Context Learning | PEFT | 강동규 | [Paper](https://arxiv.org/abs/2205.05638) <br>[Slide](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/Few-Shot%20PEFT%20is%20Better%20and%20Cheaper%20than%20ICL.pdf) |
 | 2024.03.13 | QLoRA | PEFT | 이민지 | [Paper](https://arxiv.org/abs/2305.14314) |
-|  | A Survey of Quantization Methods for Efficient Neural Network Inference | Quantization |  | [Paper](https://arxiv.org/abs/2103.13630) |
+| 2024.02.14 | A Survey of Quantization Methods for Efficient Neural Network Inference | Quantization | 이민지 | [Paper](https://arxiv.org/abs/2103.13630) |
 | 2024.02.21 | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference | Quantization | 김민준 | [Paper](https://arxiv.org/abs/1712.05877) </br>[Slide](https://github.com/devkade/DeepSync/tree/main/Docs/sprint3/Quantization_and_Training_of_Neural_Networks_for_Efficient_Integer-Arithmetic-Only_Inference.pdf)|
 | 2024.02.14 | Mixed Precision Training | Quantization | 이민지 | [Paper](https://arxiv.org/abs/1710.03740) |
 |  | Quant-Noise | Quantization |  | [Paper](https://arxiv.org/abs/2004.07320) |
@@ -19,7 +19,7 @@
 | 2024.03.13 | GPTQ | Quantization | 나보영 | [Paper](https://arxiv.org/abs/2210.17323) |
 | 2024.01.24 | Transformer 톺아보기 | Efficient Transformer | 이승호 |[Review](https://github.com/devkade/DeepSync/blob/main/Docs/sprint3/Transformer%ED%86%BA%EC%95%84%EB%B3%B4%EA%B8%B0.md)  |
 | 2024.02.14 | MegatronLM | Efficient Transformer | 이승호 | [Paper](https://arxiv.org/abs/1909.08053) |
-| 2024.01.24 | Swin Transformer | Efficient Transformer | 오원준 | [Paper](https://arxiv.org/abs/2103.14030)</br>[Review](https://ownogatari.xyz/posts/swin/)</br>[Slides](https://drive.google.com/file/d/1lKkg_PGO7e2EJt5hMZuLiPtA4QZJhIgo/view?usp=sharing)   |
+| 2024.01.24 | Swin Transformer | Efficient Transformer | 오원준 | [Paper](https://arxiv.org/abs/2103.14030)</br>[Review](https://ownogatari.xyz/posts/swin/)</br>[Slide](https://drive.google.com/file/d/1lKkg_PGO7e2EJt5hMZuLiPtA4QZJhIgo/view?usp=sharing)   |
 |  | zero | Efficient Transformer |  | [Paper](https://arxiv.org/abs/1910.02054) |
 |  | zero infinity | Efficient Transformer |  | [Paper](https://arxiv.org/abs/2104.07857) |
 | 2024.02.14 | Switch Transformer | Efficient Transformer | 오원준  | [Paper](https://arxiv.org/abs/2101.03961)</br>[Slide](https://drive.google.com/file/d/1Q7rAb1MIBOnWCkSuQRQzzvXlw7xyo4Of/view?usp=sharing) |
